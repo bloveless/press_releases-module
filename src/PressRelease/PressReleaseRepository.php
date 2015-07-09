@@ -1,7 +1,5 @@
 <?php namespace Control4\PressReleasesModule\PressRelease;
 
-use Carbon\Carbon;
-use Control4\PressReleasesModule\PressRelease\Contract\PressReleaseInterface;
 use Control4\PressReleasesModule\PressRelease\Contract\PressReleaseRepositoryInterface;
 
 /**
@@ -22,9 +20,9 @@ class PressReleaseRepository implements PressReleaseRepositoryInterface
     /**
      * Create a new Repo from a PressReleaseModel
      *
-     * @param PressReleaseInterface $model
+     * @param PressReleaseModel $model
      */
-    public function __construct(PressReleaseInterface $model)
+    public function __construct(PressReleaseModel $model)
     {
         $this->model = $model;
     }

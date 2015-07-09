@@ -21,21 +21,11 @@ class PressReleasesModuleServiceProvider extends AddonServiceProvider
     ];
 
     /**
-     * The class bindings.
-     *
-     * @var array
-     */
-    protected $bindings = [
-        'Anomaly\Streams\Platform\Model\PressReleases\PressReleasesPressReleaseEntryModel' => 'Control4\PressReleasesModule\PressRelease\PressReleaseModel',
-    ];
-
-    /**
      * The singleton bindings.
      *
      * @var array
      */
     protected $singletons = [
         'Control4\PressReleasesModule\PressRelease\Contract\PressReleaseRepositoryInterface' => 'Control4\PressReleasesModule\PressRelease\PressReleaseRepository',
-        'Control4\PressReleasesModule\PressRelease\Contract\PressReleaseInterface'           => 'Control4\PressReleasesModule\PressRelease\PressReleaseModel',
     ];
 }
