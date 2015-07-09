@@ -1,0 +1,16 @@
+{% extends "theme::layouts/default" %}
+
+{% block content %}
+    <div class="page-header" style="background-image: url('{{ asset_url("control_4.module.press_releases::img/header.jpg") }}');"></div>
+
+    <div class="container half-padding-top padding-bottom">
+        <h1>Press Release</h1>
+        <p><a href="/press_releases">Back to Press Releases</a></p>
+        <h2>{{ press_release.title }}</h2>
+        {% if press_release.sub_title %}
+            <h3>{{ press_release.sub_title }}</h3>
+        {% endif %}
+        {{ press_release.content | raw }}
+    </div>
+
+{% endblock %}

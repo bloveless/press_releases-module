@@ -1,0 +1,17 @@
+{% extends 'theme::layouts/default' %}
+
+{% block content %}
+    <div class="page-header" style="background-image: url('{{ asset_url("control_4.module.press_releases::img/header.jpg") }}');"></div>
+
+    <div class="container half-padding-top padding-bottom">
+        <h1>Press Releases Listings</h1>
+
+        <ul class="no-style">
+            {% for press_release in press_releases %}
+                <li>{{ press_release.release_date.value.day }}&mdash;<a href="/press_releases/{{ press_release.year }}/{{ str_pad(press_release.month, '2', '0', STR_PAD_LEFT) }}/{{ str_pad(press_release.day, '2', '0', STR_PAD_LEFT) }}/{{ press_release.slug }}">{{ press_release.title }}</a></li>
+            {% endfor %}
+        </ul>
+    </div>
+
+{% endblock %}
+
